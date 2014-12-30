@@ -1,0 +1,77 @@
+---
+rv2:
+  channels:
+    beta:
+      builds:
+        '4':
+          teamcityID: 987
+          artifacts:
+          - appliedenergistics2-rv2-beta-4-api.jar
+          - appliedenergistics2-rv2-beta-4-dev.jar
+          - appliedenergistics2-rv2-beta-4-javadoc.jar
+          - appliedenergistics2-rv2-beta-4.jar
+        '3':
+          teamcityID: 959
+          artifacts:
+          - appliedenergistics2-rv2-beta-3-api.jar
+          - appliedenergistics2-rv2-beta-3-dev.jar
+          - appliedenergistics2-rv2-beta-3-javadoc.jar
+          - appliedenergistics2-rv2-beta-3.jar
+        '2':
+          teamcityID: 958
+          artifacts:
+          - appliedenergistics2-rv2-beta-2-api.jar
+          - appliedenergistics2-rv2-beta-2-dev.jar
+          - appliedenergistics2-rv2-beta-2-javadoc.jar
+          - appliedenergistics2-rv2-beta-2.jar
+        '1':
+          teamcityID: 908
+          artifacts:
+          - appliedenergistics2-rv2-beta-1-api.jar
+          - appliedenergistics2-rv2-beta-1-dev.jar
+          - appliedenergistics2-rv2-beta-1-javadoc.jar
+          - appliedenergistics2-rv2-beta-1.jar
+    alpha:
+      builds:
+        '26':
+          teamcityID: 826
+          artifacts:
+          - appliedenergistics2-rv2-alpha-26-api.jar
+          - appliedenergistics2-rv2-alpha-26-dev.jar
+          - appliedenergistics2-rv2-alpha-26-javadoc.jar
+          - appliedenergistics2-rv2-alpha-26.jar
+        '21':
+          teamcityID: 774
+          artifacts:
+          - appliedenergistics2-rv2-alpha-21-api.jar
+          - appliedenergistics2-rv2-alpha-21-dev.jar
+          - appliedenergistics2-rv2-alpha-21-javadoc.jar
+          - appliedenergistics2-rv2-alpha-21.jar
+        '10':
+          teamcityID: 667
+          artifacts:
+          - appliedenergistics2-rv2-alpha-10-api.jar
+          - appliedenergistics2-rv2-alpha-10-dev.jar
+          - appliedenergistics2-rv2-alpha-10-javadoc.jar
+          - appliedenergistics2-rv2-alpha-10.jar
+        '6':
+          teamcityID: 620
+          artifacts:
+          - appliedenergistics2-rv2-alpha-6-api.jar
+          - appliedenergistics2-rv2-alpha-6-dev.jar
+          - appliedenergistics2-rv2-alpha-6-javadoc.jar
+          - appliedenergistics2-rv2-alpha-6.jar
+        '5':
+          teamcityID: 540
+          artifacts:
+          - appliedenergistics2-rv2-alpha-5-api.jar
+          - appliedenergistics2-rv2-alpha-5-dev.jar
+          - appliedenergistics2-rv2-alpha-5-javadoc.jar
+          - appliedenergistics2-rv2-alpha-5.jar
+        '4':
+          teamcityID: 522
+          artifacts:
+          - appliedenergistics2-rv2-alpha-4-api.jar
+          - appliedenergistics2-rv2-alpha-4-dev.jar
+          - appliedenergistics2-rv2-alpha-4-javadoc.jar
+          - appliedenergistics2-rv2-alpha-4.jar

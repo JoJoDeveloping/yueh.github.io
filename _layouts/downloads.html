@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="container">
+        {{ content }}
+
+        <div role="tabpanel">
+            <ul class="nav nav-pills" role="tablist">
+                {% for rv in site.data.downloads %}
+                    {% assign activeHeader = forloop.first %}
+                    {% for chan in rv[1].channels %}
+                        <li role="presentation" {% if activeHeader and forloop.first %}class="active"{% endif %}><a href="#{{ rv[0] }}-{{ chan[0] }}" aria-controls="profile" role="tab" data-toggle="tab">{{ rv[0] }} - {{ chan[0] }} {{ chan[1].builds | size }}</a></li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+            <div class="tab-content">
+                {% for rv in site.data.downloads %}
+                {% assign activeContent = forloop.first %}
+                    {% for chan in rv[1].channels %}
+                        <div role="tabpanel" class="tab-pane{% if activeContent and forloop.first %} active{% endif %}" id="{{ rv[0] }}-{{ chan[0] }}">
+                        {% for b in chan[1].builds %}
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">{{ rv[0] }}.{{ chan[0] }} build {{ b[0] }}</h3>
+								</div>
+								<div class="panel-body">
+									{{  b[1].changelog | newline_to_br }}
+									<ul>
+										{% for artifact in b[1].artifacts %}
+										<li>
+											<a href="http://ci.tsr.me/repository/download/AppliedEnergistics_ReleaseBuild/{{ b[1].teamcityID }}:id/{{ artifact }}">{{ artifact }}</a>
+										</li>
+										{% endfor %}
+									</ul>
+								</div>
+								<div class="panel-footer">
+									<a href="http://minecraft.curseforge.com/mc-mods/{{ site.data.curse.id }}-{{ site.data.curse.slug }}/files/{{  b[1].curseID }}/download">Download for {{ b.minecraft }}</a>
+									<a href="http://ae-mod.info/builds/appliedenergistics2-{{ rv[0] }}-{{ chan[0] }}-{{ b[0] }}.jar">Mirror</a>
+									<a href="http://ae-mod.info/builds/appliedenergistics2-{{ rv[0] }}-{{ chan[0] }}-{{ b[0] }}-dev.jar">Dev</a>
+									<a href="http://ae-mod.info/builds/appliedenergistics2-{{ rv[0] }}-{{ chan[0] }}-{{ b[0] }}-api.jar">API</a>
+								</div>
+							</div>
+
+                        {% endfor %}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+
+	</div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
+
