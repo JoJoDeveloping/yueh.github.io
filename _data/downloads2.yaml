@@ -1,0 +1,36 @@
+--- 
+rv1: 
+  channels: 
+    stable: 
+      builds: 
+        1: 
+          changelog: "Nothing\n"
+          curseID: 2214847
+          forge: "10.13.2.1230"
+          minecraft: "1.7.10"
+rv2: 
+  channels: 
+    alpha: 
+      builds: 
+        29: 
+          curseID: 2221351
+          forge: "10.13.2.1230"
+          minecraft: "1.7.10"
+    beta: 
+      builds: 
+        1: 
+          changelog: "Bump channel to beta\n"
+          curseID: 2221937
+          forge: "10.13.2.1230"
+          minecraft: "1.7.10"
+        2: 
+          changelog: |
+              #624 Fixes disabled features getting not disabled - thatsIch
+              #572 Fixes inventory validation for any kind of Player (enables automation via robots e.g.) - thatsIch
+              Sound improvements - TheJulianJES
+              Use player inventory to let NEI fill a recipe when it is not provided by the network - riking
+              #604 Fixes crash on Achievement - thatsIch
+              #593 Updating RF Integration to use version 1.7.10R1.0.2 - thatsIch
+          curseID: 2221937
+          forge: "10.13.2.1230"
+          minecraft: "1.7.10"
